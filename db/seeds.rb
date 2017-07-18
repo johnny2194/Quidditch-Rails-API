@@ -12,3 +12,5 @@ team1 = Team.create({name: "Gryffindor"})
 team2 = Team.create({name: "Slytherin"}) 
 team3 = Team.create({name: "Hufflepuff"}) 
 team4 = Team.create({name: "Ravenclaw"}) 
+
+# player1 = Player.create({ name: "Harry Potter", age: })
