@@ -5,7 +5,8 @@ class PlayersController < ApplicationController
 
     # How do we include information from Sponsor and Sponsorship within Player?
 
-    render :json => players.as_json({
+    render :json => players.as_json(
+    {
       include: {
         sponsorships: {
           only: :amount,
@@ -15,7 +16,9 @@ class PlayersController < ApplicationController
             }
           }
         }
-      }
+      },
+
+      except: [:created_at, :updated_at, :team_id]
     })
   
 
